@@ -35,9 +35,3 @@ footer {
 .right {
   float: right;
 }
-
-@media (max-width: 600px) {
-  .left {
-    background-color: red;
-  }
-}
