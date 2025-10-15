@@ -19,3 +19,25 @@ footer {
   color: midnightblue;
 }
 
+.tile-image {
+  max-width: 300px;
+  float: left;
+}
+
+.card {
+  width: 45%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+@media (max-width: 600px) {
+  .left {
+    background-color: red;
+  }
+}
