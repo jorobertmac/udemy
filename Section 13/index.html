@@ -12,6 +12,34 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script>
+      function lengthOfTime(year, month, day) {
+        const start = new Date(year, month - 1, day)
+        const now = new Date()
+        let years = now.getFullYear() - start.getFullYear()
+        let months = now.getMonth() - start.getMonth()
+        if (months < 0) {
+          years--
+          months += 12
+        }
+        if (now.getDate() < start.getDate()) {
+          months--
+          if (months < 0) {
+            years--
+            months += 12
+          }
+        }
+        let output = ""
+        if (years > 0) {
+          output += `${years} ${years === 1 ? "year" : "years"}`
+        }
+        if (months > 0) {
+          if (output) output += " and "
+          output += `${months} ${months === 1 ? "month" : "months"}`
+        }
+        document.write(output || "less than a month")
+      }
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -67,12 +95,88 @@
       <div class="p-5 text-center bg-body-tertiary">
         <div class="container py-5">
           <h1 class="text-body-emphasis">Who I am</h1>
+          <div
+            class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+          >
+            <div class="list-group">
+              <!-- Christian -->
+              <a
+                href="https://www.gotquestions.org/know-Jesus.html"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+                target="_blank"
+              >
+                <div class="d-flex gap-2 w-100 justify-content-center">
+                  <div>
+                    <h6 class="mb-0">Christian</h6>
+                    <p class="mb-0 opacity-75">
+                      Follower of the Way, the Truth, and the Life - Jesus
+                      Christ
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <!-- Husband -->
+              <a
+                href="https://www.desiringgod.org/articles/bring-out-her-best"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+                target="_blank"
+              >
+                <div class="d-flex gap-2 w-100 justify-content-center">
+                  <div>
+                    <h6 class="mb-0">Husband</h6>
+                    <p class="mb-0 opacity-75">
+                      Claudia and I have shared
+                      <script>
+                        lengthOfTime(2019, 11, 2)
+                      </script>
+                       together
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <!-- Father -->
+              <a
+                href="https://www.focusonthefamily.com/parenting/the-power-of-fathers/"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+                target="_blank"
+              >
+                <div class="d-flex gap-2 w-100 justify-content-center">
+                  <div>
+                    <h6 class="mb-0">Father</h6>
+                    <p class="mb-0 opacity-75">
+                      Felicity is
+                      <script>
+                        lengthOfTime(2024, 4, 23)
+                      </script>
+                      of what her name means: Intense Happiness
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
           <p class="col-lg-8 mx-auto lead">
-            This takes the basic jumbotron above and makes its background
-            edge-to-edge with a <code>.container</code> inside to align content.
-            Similar to above, it's been recreated with built-in grid and utility
-            classes.
+            I am foremost a Christian Husband to Claudia and Father to Felicity.
           </p>
+          <hr />
+          <p class="col-lg-8 mx-auto lead">
+            I have worked for FedEx Express for
+            <script>
+              lengthOfTime(2014, 9, 30)
+            </script>
+            as a delivery driver.
+          </p>
+          <hr />
+          <p class="col-lg-8 mx-auto lead">
+            I began my programming journey in June of 2021 learning python. I
+            never found a good rhythm to keep practicing amidst my fulltime job
+            and family life. However, I am now learning the ins and outs of web
+            development at a pace that lets me be attentive to my family.
+          </p>
+          <hr />
         </div>
       </div>
     </div>
