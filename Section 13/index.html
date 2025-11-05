@@ -322,12 +322,103 @@
       <div class="p-5 text-center bg-body-tertiary">
         <div class="container py-5">
           <h1 class="text-body-emphasis">How I can</h1>
-          <p class="col-lg-8 mx-auto lead">
-            This takes the basic jumbotron above and makes its background
-            edge-to-edge with a <code>.container</code> inside to align content.
-            Similar to above, it's been recreated with built-in grid and utility
-            classes.
-          </p>
+          <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="tech-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#tech-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="tech-tab-pane"
+                aria-selected="true"
+              >
+                Technical Proficiency
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="professional-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#professional-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="professional-tab-pane"
+                aria-selected="false"
+              >
+                Professional Attributes
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="education-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#education-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="education-tab-pane"
+                aria-selected="false"
+              >
+                Education
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="employment-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#employment-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="employment-tab-pane"
+                aria-selected="false"
+              >
+                Employment
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="tech-tab-pane"
+              role="tabpanel"
+              aria-labelledby="tech-tab"
+              tabindex="0"
+            >
+              This is content for my technical proficiency: courses and things I
+              have completed and am working on
+            </div>
+            <div
+              class="tab-pane fade"
+              id="professional-tab-pane"
+              role="tabpanel"
+              aria-labelledby="professional-tab"
+              tabindex="0"
+            >
+              This is content for my professional attributes: hard worker, super smart, and cute.
+            </div>
+            <div
+              class="tab-pane fade"
+              id="education-tab-pane"
+              role="tabpanel"
+              aria-labelledby="education-tab"
+              tabindex="0"
+            >
+              This is content for my education: basically Wheaton.
+            </div>
+            <div
+              class="tab-pane fade"
+              id="employment-tab-pane"
+              role="tabpanel"
+              aria-labelledby="employment-tab"
+              tabindex="0"
+            >
+              This is content for my employment: like where I worked
+            </div>
+          </div>
         </div>
       </div>
     </div>
